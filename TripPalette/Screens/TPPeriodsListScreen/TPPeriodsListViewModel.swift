@@ -55,7 +55,9 @@ final class TPPeriodsListViewModel: ObservableObject {
     }
 
     func deletePeriod(id: UUID) {
-        planService.deleteAll(for: id)
+        guard let period = periodService.periods.first(where: { $0.id == id }) else { return }
+        let retained = periodService.periods.filter { $0.id != id }
+        planService.deleteExclusiveDays(of: period, retainedPeriods: retained)
         periodService.delete(id: id)
     }
 

@@ -14,6 +14,7 @@
 		1AD57B7278EA0799C1E35970 /* TPYearGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E867402DBC67A3D9230C11 /* TPYearGridView.swift */; };
 		22143378C9654BF63A8DBB32 /* TPPlanDaySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D65BBB049C6B2A3BFFA7643 /* TPPlanDaySectionView.swift */; };
 		3214DFD2DA12515D82D34C72 /* TuistBundle+TripPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38362F30B186EB7368F6A0BD /* TuistBundle+TripPalette.swift */; };
+		34FB721378C8D196E7029439 /* TPPeriodPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5E512BC32D2FEC721B445C /* TPPeriodPalette.swift */; };
 		3632CFF7643027DEA70BE195 /* TPRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E4EF20CB1509F4847D1E3 /* TPRootView.swift */; };
 		42141A602FEAF1DCAA33062D /* TPPlanBlockRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C9DF1FE1D6D94742A6512 /* TPPlanBlockRowView.swift */; };
 		462A5349B34F82F5C5F5A4FD /* TPListItemTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1D7C3D6A71A271D6E30B72 /* TPListItemTextField.swift */; };
@@ -40,6 +41,7 @@
 		C29C0200E21780AC8576E199 /* TPPeriodEditSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542C94E538A59F2F8010121D /* TPPeriodEditSession.swift */; };
 		C907343F68FD357E2F6751BE /* TPPeriodEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78726768A241B6D6C7D222E /* TPPeriodEditorView.swift */; };
 		CB254A474E456BB29F1877E8 /* ElegantEmojiPicker in Frameworks */ = {isa = PBXBuildFile; productRef = F3F68269C02805A4D5621E3D /* ElegantEmojiPicker */; };
+		CC8F304534DD7CE189C64F90 /* TPTabBarReselectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DCDBD65D498C67DBCE2DA4 /* TPTabBarReselectHandler.swift */; };
 		D208789151B015BB68D57A95 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58617F04270C443C47839F07 /* AppRouter.swift */; };
 		D33E2FA68CCD923A8D681D31 /* TPCalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908D425E1233A5D9012B7B8 /* TPCalendarDate.swift */; };
 		D44670FC44799413D3F9EF0E /* TuistAssets+TripPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF1101BD1B31BA6D6EED164 /* TuistAssets+TripPalette.swift */; };
@@ -67,6 +69,7 @@
 		1B6C828ADABFFE99990FC638 /* TPPeriodRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodRecord.swift; sourceTree = "<group>"; };
 		1C55CA9D4E402220F972371E /* TripPaletteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPaletteApp.swift; sourceTree = "<group>"; };
 		1D3A3F00341FF347A99539DF /* TPCalendarViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPCalendarViewState.swift; sourceTree = "<group>"; };
+		1F5E512BC32D2FEC721B445C /* TPPeriodPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodPalette.swift; sourceTree = "<group>"; };
 		2BB4977448B1E746F134EA21 /* TPCalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPCalendarViewModel.swift; sourceTree = "<group>"; };
 		2DDA6C08C4BC71E7607E0C2A /* Color+TripPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+TripPalette.swift"; sourceTree = "<group>"; };
 		2DF1101BD1B31BA6D6EED164 /* TuistAssets+TripPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+TripPalette.swift"; sourceTree = "<group>"; };
@@ -84,6 +87,7 @@
 		7F4A3739312E1237980CA812 /* TPPeriodColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodColor.swift; sourceTree = "<group>"; };
 		80047EE01CBBCA9907A3BCD0 /* TPPeriodPlanFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodPlanFactory.swift; sourceTree = "<group>"; };
 		83B52903DCA97734F10A550F /* TPPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriod.swift; sourceTree = "<group>"; };
+		86DCDBD65D498C67DBCE2DA4 /* TPTabBarReselectHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPTabBarReselectHandler.swift; sourceTree = "<group>"; };
 		892CF37F4033E8585D0310EB /* TPCalendarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPCalendarFactory.swift; sourceTree = "<group>"; };
 		8DEF1D37E7C28C0C0AABAA90 /* TPPeriodPlanDayRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodPlanDayRecord.swift; sourceTree = "<group>"; };
 		931610543C39CE4587EBCFBF /* TPCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPCalendarView.swift; sourceTree = "<group>"; };
@@ -259,6 +263,7 @@
 				7F4A3739312E1237980CA812 /* TPPeriodColor.swift */,
 				BA77DC00592B20FF555E72BE /* TPPeriodDraft.swift */,
 				542C94E538A59F2F8010121D /* TPPeriodEditSession.swift */,
+				1F5E512BC32D2FEC721B445C /* TPPeriodPalette.swift */,
 				0C3EC304A663DABAF4CCE2B6 /* TPPlanBlock.swift */,
 			);
 			path = Models;
@@ -268,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				2DDA6C08C4BC71E7607E0C2A /* Color+TripPalette.swift */,
+				86DCDBD65D498C67DBCE2DA4 /* TPTabBarReselectHandler.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -427,10 +433,12 @@
 				D208789151B015BB68D57A95 /* AppRouter.swift in Sources */,
 				B3418DC02D40AAD026E17AD5 /* TripPaletteApp.swift in Sources */,
 				4B4D9E94AA7136FDC51D8F75 /* Color+TripPalette.swift in Sources */,
+				CC8F304534DD7CE189C64F90 /* TPTabBarReselectHandler.swift in Sources */,
 				14935307053F274F9DD2A621 /* TPPeriod.swift in Sources */,
 				E70F087323266C40F35DAB52 /* TPPeriodColor.swift in Sources */,
 				178A4E4FC111CFF8E4A1F494 /* TPPeriodDraft.swift in Sources */,
 				C29C0200E21780AC8576E199 /* TPPeriodEditSession.swift in Sources */,
+				34FB721378C8D196E7029439 /* TPPeriodPalette.swift in Sources */,
 				7DEB08E3241FC48EB61CC37A /* TPPlanBlock.swift in Sources */,
 				D33E2FA68CCD923A8D681D31 /* TPCalendarDate.swift in Sources */,
 				B93AD3516FFDF5F96BADAE86 /* TPCalendarFactory.swift in Sources */,

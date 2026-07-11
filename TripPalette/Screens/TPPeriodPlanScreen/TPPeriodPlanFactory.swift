@@ -6,7 +6,6 @@ final class TPPeriodPlanFactory {
         period: TPPeriod,
         planService: TPPeriodPlanService
     ) -> some View {
-        let viewModel = TPPeriodPlanViewModel(period: period, planService: planService)
-        return TPPeriodPlanView(viewModel: viewModel)
+        TPPeriodPlanView(period: period, planService: planService)
     }
 }

@@ -2,9 +2,18 @@ import SwiftUI
 
 @MainActor
 final class TPCalendarFactory {
-    static func configure(periodService: TPPeriodService) -> some View {
-        let router = TPCalendarRouter()
-        let viewModel = TPCalendarViewModel(router: router, periodService: periodService)
-        return TPCalendarView(viewModel: viewModel)
+    static func makeViewModel(
+        periodService: TPPeriodService,
+        planService: TPPeriodPlanService
+    ) -> TPCalendarViewModel {
+        TPCalendarViewModel(
+            router: TPCalendarRouter(),
+            periodService: periodService,
+            planService: planService
+        )
+    }
+
+    static func configure(viewModel: TPCalendarViewModel) -> some View {
+        TPCalendarView(viewModel: viewModel)
     }
 }

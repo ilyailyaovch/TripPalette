@@ -97,12 +97,17 @@ struct TPCalendarView: View {
                 }
                 .padding(.bottom, 24)
             }
-            .task(id: monthID(viewModel.state.focusedMonth)) {
+            .task(id: "\(monthID(viewModel.state.focusedMonth))-\(viewModel.state.scrollToFocusedRequestID)") {
                 await scrollToFocusedMonth(proxy: proxy)
             }
             .onChange(of: viewModel.state.focusedMonth) { _, newValue in
                 withAnimation(.easeInOut(duration: 0.25)) {
                     proxy.scrollTo(monthID(newValue), anchor: .top)
+                }
+            }
+            .onChange(of: viewModel.state.scrollToFocusedRequestID) { _, _ in
+                withAnimation(.easeInOut(duration: 0.25)) {
+                    proxy.scrollTo(monthID(viewModel.state.focusedMonth), anchor: .top)
                 }
             }
         }

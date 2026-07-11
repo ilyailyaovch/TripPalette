@@ -11,7 +11,7 @@ struct TPYearGridView: View {
     }
 
     private var positioningID: String {
-        "\(currentYear)-\(viewModel.state.availableYears.map(String.init).joined(separator: ","))"
+        "\(currentYear)-\(viewModel.state.availableYears.map(String.init).joined(separator: ","))-\(viewModel.state.scrollToFocusedRequestID)"
     }
 
     var body: some View {

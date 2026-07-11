@@ -8,12 +8,18 @@ final class TPCalendarViewModel: ObservableObject {
     let router: TPCalendarRouter
 
     private let periodService: TPPeriodService
+    private let planService: TPPeriodPlanService
     private let calendar = TPCalendarDate.calendar
     private var cancellables = Set<AnyCancellable>()
 
-    init(router: TPCalendarRouter, periodService: TPPeriodService) {
+    init(
+        router: TPCalendarRouter,
+        periodService: TPPeriodService,
+        planService: TPPeriodPlanService
+    ) {
         self.router = router
         self.periodService = periodService
+        self.planService = planService
 
         let now = Date()
         let currentMonth = TPCalendarDate.monthComponents(from: now)
@@ -76,6 +82,20 @@ final class TPCalendarViewModel: ObservableObject {
         updateState {
             $0.focusedMonth = DateComponents(year: month.year, month: month.month)
             $0.displayMode = .month
+        }
+    }
+
+    func scrollToToday() {
+        let now = Date()
+        let currentMonth = TPCalendarDate.monthComponents(from: now)
+        let currentYear = calendar.component(.year, from: now)
+
+        updateState {
+            $0.focusedMonth = currentMonth
+            $0.scrollToFocusedRequestID += 1
+            if $0.displayMode == .year, !$0.availableYears.contains(currentYear) {
+                $0.availableYears = TPCalendarDate.years(around: currentYear, radius: 2)
+            }
         }
     }
 
@@ -199,6 +219,10 @@ final class TPCalendarViewModel: ObservableObject {
     }
 
     func deletePeriod(id: UUID) {
+        if let period = state.periods.first(where: { $0.id == id }) {
+            let retained = state.periods.filter { $0.id != id }
+            planService.deleteExclusiveDays(of: period, retainedPeriods: retained)
+        }
         periodService.delete(id: id)
 
         if var session = state.editSession {

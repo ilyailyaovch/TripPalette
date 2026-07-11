@@ -5,18 +5,26 @@ import SwiftUI
 final class TPPeriodPlanViewModel: ObservableObject {
     @Published private(set) var state: TPPeriodPlanViewState
 
+    private let period: TPPeriod
     private let planService: TPPeriodPlanService
 
     init(period: TPPeriod, planService: TPPeriodPlanService) {
+        self.period = period
         self.planService = planService
 
-        let days = Self.makeDays(for: period, planService: planService)
         state = TPPeriodPlanViewState(
             periodID: period.id,
             title: Self.displayTitle(for: period),
             accentColor: period.color,
-            days: days
+            days: Self.makeDays(for: period, planService: planService)
         )
+    }
+
+    func reloadFromStorage() {
+        var copy = state
+        copy.days = Self.makeDays(for: period, planService: planService)
+        copy.isDirty = false
+        state = copy
     }
 
     func addBlock(kind: TPPlanBlockKind) {
@@ -28,7 +36,7 @@ final class TPPeriodPlanViewModel: ObservableObject {
         var newBlockID: UUID?
         let focusedID = state.focusedBlockID
 
-        updateDay(id: dayID) { day in
+        updateDay(id: dayID, persist: false) { day in
             var insertIndex = day.blocks.count
 
             if let focusedID,
@@ -81,6 +89,8 @@ final class TPPeriodPlanViewModel: ObservableObject {
         copy.focusEpoch += 1
         copy.isDirty = true
         state = copy
+        // Пустой новый пункт не пишем на диск — иначе он сразу отфильтруется.
+        persistDayKeepingPlaceholders(copy.days[dayIndex])
     }
 
     func focus(blockID: UUID?, cursorAtEnd: Bool = false) {
@@ -171,29 +181,45 @@ final class TPPeriodPlanViewModel: ObservableObject {
         copy.focusEpoch += 1
         copy.isDirty = true
         state = copy
+        persistDayKeepingPlaceholders(copy.days[dayIndex])
     }
 
     func save() {
         for day in state.days {
-            let blocksToSave = day.blocks.filter { !$0.isEffectivelyEmpty }
-            planService.save(
-                periodID: state.periodID,
-                day: day.day,
-                blocks: blocksToSave
-            )
+            persistDayKeepingPlaceholders(day)
         }
-
         var copy = state
         copy.isDirty = false
         state = copy
     }
 
-    private func updateDay(id: String, mutate: (inout TPDayPlan) -> Void) {
+    private func updateDay(
+        id: String,
+        persist: Bool = true,
+        mutate: (inout TPDayPlan) -> Void
+    ) {
         var copy = state
         guard let index = copy.days.firstIndex(where: { $0.id == id }) else { return }
         mutate(&copy.days[index])
         copy.isDirty = true
         state = copy
+        if persist {
+            persistDayKeepingPlaceholders(copy.days[index])
+        }
+    }
+
+    /// Сохраняет день, оставляя пустые блоки, если в дне ещё нет заполненного контента
+    /// или если пустой блок — единственный «хвост» списка (чтобы Enter/добавление не пропадали).
+    private func persistDayKeepingPlaceholders(_ day: TPDayPlan) {
+        let nonEmpty = day.blocks.filter { !$0.isEffectivelyEmpty }
+        let blocksToSave: [TPPlanBlock]
+        if nonEmpty.isEmpty {
+            // Нечего писать — не трогаем диск, пока пользователь только создал пустые поля.
+            return
+        } else {
+            blocksToSave = nonEmpty
+        }
+        planService.save(day: day.day, blocks: blocksToSave)
     }
 
     private static func makeDays(
@@ -211,7 +237,7 @@ final class TPPeriodPlanViewModel: ObservableObject {
             }
             .sorted { $0.0 < $1.0 }
             .map { _, day in
-                var blocks = planService.blocks(periodID: period.id, day: day)
+                var blocks = planService.blocks(day: day)
                 if blocks.isEmpty {
                     blocks = [.make(.text)]
                 }

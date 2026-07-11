@@ -16,6 +16,8 @@ struct TPCalendarViewState: Equatable {
     var editSession: TPPeriodEditSession?
     var availableMonths: [DateComponents]
     var availableYears: [Int]
+    /// Инкремент при запросе скролла к focusedMonth (вкладка «Календарь»).
+    var scrollToFocusedRequestID: Int = 0
 
     init(
         focusedMonth: DateComponents = TPCalendarDate.monthComponents(from: Date()),

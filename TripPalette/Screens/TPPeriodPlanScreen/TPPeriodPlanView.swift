@@ -2,8 +2,14 @@ import SwiftUI
 import UIKit
 
 struct TPPeriodPlanView: View {
-    @ObservedObject var viewModel: TPPeriodPlanViewModel
+    @StateObject private var viewModel: TPPeriodPlanViewModel
     @FocusState private var textFieldFocus: UUID?
+
+    init(period: TPPeriod, planService: TPPeriodPlanService) {
+        _viewModel = StateObject(
+            wrappedValue: TPPeriodPlanViewModel(period: period, planService: planService)
+        )
+    }
 
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
@@ -86,6 +92,12 @@ struct TPPeriodPlanView: View {
             if let newValue {
                 textFieldFocus = newValue
             }
+        }
+        .onAppear {
+            viewModel.reloadFromStorage()
+        }
+        .onDisappear {
+            viewModel.save()
         }
     }
 

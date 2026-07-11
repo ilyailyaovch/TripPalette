@@ -17,19 +17,10 @@ struct TPPeriodEditorView: View {
     @State private var title = ""
     @State private var emoji = ""
     @State private var selectedEmoji: Emoji?
-    @State private var selectedColor: Color = .tp_tint
+    @State private var selectedColor: Color = TPPeriodPalette.default.color
     @State private var selectedPeriodID: UUID?
     @State private var selectedDetent: PresentationDetent = .medium
     @State private var isEmojiPickerPresented = false
-
-    private let palette: [Color] = [
-        Color.tp_tint,
-        Color(red: 0.20, green: 0.66, blue: 0.55),
-        Color(red: 0.95, green: 0.55, blue: 0.25),
-        Color(red: 0.29, green: 0.55, blue: 0.96),
-        Color(red: 0.58, green: 0.40, blue: 0.85),
-        Color(red: 0.35, green: 0.45, blue: 0.55),
-    ]
 
     var body: some View {
         NavigationStack {
@@ -85,19 +76,19 @@ struct TPPeriodEditorView: View {
 
                 Section("Цвет") {
                     LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 6), spacing: 12) {
-                        ForEach(palette.indices, id: \.self) { index in
+                        ForEach(TPPeriodPalette.colors) { swatch in
                             Circle()
-                                .fill(palette[index])
+                                .fill(swatch.color)
                                 .frame(width: 36, height: 36)
                                 .overlay {
-                                    if colorsMatch(selectedColor, palette[index]) {
+                                    if TPPeriodPalette.matches(selectedColor, swatch.color) {
                                         Image(systemName: "checkmark")
                                             .font(.caption.weight(.bold))
                                             .foregroundStyle(.white)
                                     }
                                 }
                                 .onTapGesture {
-                                    selectedColor = palette[index]
+                                    selectedColor = swatch.color
                                 }
                         }
                     }
@@ -224,7 +215,7 @@ struct TPPeriodEditorView: View {
             title = ""
             emoji = ""
             selectedEmoji = nil
-            selectedColor = .tp_tint
+            selectedColor = TPPeriodPalette.default.color
             selectedPeriodID = nil
         case let .edit(session):
             let first = session.periods.first
@@ -243,7 +234,7 @@ struct TPPeriodEditorView: View {
     private func apply(_ period: TPPeriod) {
         title = period.title ?? ""
         emoji = period.emoji ?? ""
-        selectedColor = closestPaletteColor(to: period.color)
+        selectedColor = TPPeriodPalette.closest(to: period.color)
     }
 
     private func save() {
@@ -273,22 +264,5 @@ struct TPPeriodEditorView: View {
             return "Без названия · \(period.dates.count) дн."
         }
         return parts.joined(separator: " ")
-    }
-
-    private func closestPaletteColor(to color: Color) -> Color {
-        palette.first(where: { colorsMatch($0, color) }) ?? color
-    }
-
-    private func colorsMatch(_ lhs: Color, _ rhs: Color) -> Bool {
-        let left = UIColor(lhs)
-        let right = UIColor(rhs)
-        var lr: CGFloat = 0, lg: CGFloat = 0, lb: CGFloat = 0, la: CGFloat = 0
-        var rr: CGFloat = 0, rg: CGFloat = 0, rb: CGFloat = 0, ra: CGFloat = 0
-        left.getRed(&lr, green: &lg, blue: &lb, alpha: &la)
-        right.getRed(&rr, green: &rg, blue: &rb, alpha: &ra)
-        return abs(lr - rr) < 0.02
-            && abs(lg - rg) < 0.02
-            && abs(lb - rb) < 0.02
-            && abs(la - ra) < 0.02
     }
 }
