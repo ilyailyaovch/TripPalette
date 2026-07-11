@@ -3,44 +3,349 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 55;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0714CAFD66CB44C0E10ED1A0 /* TPPeriodRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6C828ADABFFE99990FC638 /* TPPeriodRecord.swift */; };
+		0A5C8D4BC979872D5633D014 /* TPPeriodPlanFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80047EE01CBBCA9907A3BCD0 /* TPPeriodPlanFactory.swift */; };
+		14935307053F274F9DD2A621 /* TPPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B52903DCA97734F10A550F /* TPPeriod.swift */; };
+		178A4E4FC111CFF8E4A1F494 /* TPPeriodDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA77DC00592B20FF555E72BE /* TPPeriodDraft.swift */; };
+		1AD57B7278EA0799C1E35970 /* TPYearGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E867402DBC67A3D9230C11 /* TPYearGridView.swift */; };
+		22143378C9654BF63A8DBB32 /* TPPlanDaySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D65BBB049C6B2A3BFFA7643 /* TPPlanDaySectionView.swift */; };
+		3214DFD2DA12515D82D34C72 /* TuistBundle+TripPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38362F30B186EB7368F6A0BD /* TuistBundle+TripPalette.swift */; };
+		3632CFF7643027DEA70BE195 /* TPRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E4EF20CB1509F4847D1E3 /* TPRootView.swift */; };
+		42141A602FEAF1DCAA33062D /* TPPlanBlockRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C9DF1FE1D6D94742A6512 /* TPPlanBlockRowView.swift */; };
+		462A5349B34F82F5C5F5A4FD /* TPListItemTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1D7C3D6A71A271D6E30B72 /* TPListItemTextField.swift */; };
+		4B4D9E94AA7136FDC51D8F75 /* Color+TripPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDA6C08C4BC71E7607E0C2A /* Color+TripPalette.swift */; };
+		54C7513D12E8187C5B8A49A0 /* TPPeriodPlanViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9531B17942C8A62C78CF57 /* TPPeriodPlanViewState.swift */; };
+		59271D625E781E524807CCA8 /* TPCalendarViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3A3F00341FF347A99539DF /* TPCalendarViewState.swift */; };
+		5A82F4D6CBD959CEC2538CFC /* TPPeriodPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD55BC8BAAFF55D1F06BFB /* TPPeriodPlanView.swift */; };
+		6B52817A0503143A703A0B5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D51C04C0B4DE7226A341F0BF /* Assets.xcassets */; };
+		6D1C3226ADFCB9AFBEDA683D /* TPPeriodPlanDayRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF1D37E7C28C0C0AABAA90 /* TPPeriodPlanDayRecord.swift */; };
+		7AA3F1F2048E5528C22B38E5 /* TPPeriodsListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7297884A2C3282A6BA668A6A /* TPPeriodsListFactory.swift */; };
+		7BC48C1A9CF4E38B682DB716 /* TPPeriodPlanService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111001CCEF230A54A9821018 /* TPPeriodPlanService.swift */; };
+		7D61A46DE47DA84E943A8FC1 /* TPCalendarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38687E74B5E5F78FB1ED498B /* TPCalendarRouter.swift */; };
+		7DEB08E3241FC48EB61CC37A /* TPPlanBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3EC304A663DABAF4CCE2B6 /* TPPlanBlock.swift */; };
+		84A62CC7B23AA908FEC137D4 /* TPDayCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04EF99A9854027096DFE951 /* TPDayCellView.swift */; };
+		8AF9CA370FD6DA12AA19F91B /* TPPeriodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AE713A767DE460B1068377 /* TPPeriodService.swift */; };
+		96DE1CBE7DA0FC900E39DA50 /* TPWeekRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B404BF92D239C57926DFB7 /* TPWeekRowView.swift */; };
+		AC83FBB78DA95A348FD9154B /* TPPeriodsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4021D73528D28BE37F9F741 /* TPPeriodsListViewModel.swift */; };
+		B09DF0BD542076888F5F81BE /* TPCalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4977448B1E746F134EA21 /* TPCalendarViewModel.swift */; };
+		B3418DC02D40AAD026E17AD5 /* TripPaletteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C55CA9D4E402220F972371E /* TripPaletteApp.swift */; };
+		B7FDAE6E0FC7E5542E070B56 /* TPPeriodPlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB02A768653CDB076385129 /* TPPeriodPlanViewModel.swift */; };
+		B93AD3516FFDF5F96BADAE86 /* TPCalendarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892CF37F4033E8585D0310EB /* TPCalendarFactory.swift */; };
+		C10842CF8D6A08F730A29392 /* TPCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931610543C39CE4587EBCFBF /* TPCalendarView.swift */; };
+		C144ED4C5510EB626BFFD4E4 /* TPPeriodsListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDE4FD8E78E32B0E587D82 /* TPPeriodsListViewState.swift */; };
+		C29C0200E21780AC8576E199 /* TPPeriodEditSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542C94E538A59F2F8010121D /* TPPeriodEditSession.swift */; };
+		C907343F68FD357E2F6751BE /* TPPeriodEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78726768A241B6D6C7D222E /* TPPeriodEditorView.swift */; };
+		CB254A474E456BB29F1877E8 /* ElegantEmojiPicker in Frameworks */ = {isa = PBXBuildFile; productRef = F3F68269C02805A4D5621E3D /* ElegantEmojiPicker */; };
+		D208789151B015BB68D57A95 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58617F04270C443C47839F07 /* AppRouter.swift */; };
+		D33E2FA68CCD923A8D681D31 /* TPCalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908D425E1233A5D9012B7B8 /* TPCalendarDate.swift */; };
+		D44670FC44799413D3F9EF0E /* TuistAssets+TripPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF1101BD1B31BA6D6EED164 /* TuistAssets+TripPalette.swift */; };
+		E70F087323266C40F35DAB52 /* TPPeriodColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A3739312E1237980CA812 /* TPPeriodColor.swift */; };
+		EE48F6D0E5E23F3DC489E0FA /* TPPeriodsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E990E052C8D36F62E10E4810 /* TPPeriodsListView.swift */; };
+		F07123047E5109364B4DEE7B /* TPMonthSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01017C0F5D8E9D1E1F2054F /* TPMonthSectionView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		70DC489A7C4CA3CCB0966D95 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		098A2994300231090042CF49 /* TripPalette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripPalette.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C3EC304A663DABAF4CCE2B6 /* TPPlanBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPlanBlock.swift; sourceTree = "<group>"; };
+		111001CCEF230A54A9821018 /* TPPeriodPlanService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodPlanService.swift; sourceTree = "<group>"; };
+		1B6C828ADABFFE99990FC638 /* TPPeriodRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodRecord.swift; sourceTree = "<group>"; };
+		1C55CA9D4E402220F972371E /* TripPaletteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPaletteApp.swift; sourceTree = "<group>"; };
+		1D3A3F00341FF347A99539DF /* TPCalendarViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPCalendarViewState.swift; sourceTree = "<group>"; };
+		2BB4977448B1E746F134EA21 /* TPCalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPCalendarViewModel.swift; sourceTree = "<group>"; };
+		2DDA6C08C4BC71E7607E0C2A /* Color+TripPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+TripPalette.swift"; sourceTree = "<group>"; };
+		2DF1101BD1B31BA6D6EED164 /* TuistAssets+TripPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+TripPalette.swift"; sourceTree = "<group>"; };
+		33AE713A767DE460B1068377 /* TPPeriodService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodService.swift; sourceTree = "<group>"; };
+		38362F30B186EB7368F6A0BD /* TuistBundle+TripPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+TripPalette.swift"; sourceTree = "<group>"; };
+		38687E74B5E5F78FB1ED498B /* TPCalendarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPCalendarRouter.swift; sourceTree = "<group>"; };
+		542C94E538A59F2F8010121D /* TPPeriodEditSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodEditSession.swift; sourceTree = "<group>"; };
+		58617F04270C443C47839F07 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		5C3C9DF1FE1D6D94742A6512 /* TPPlanBlockRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPlanBlockRowView.swift; sourceTree = "<group>"; };
+		6A9531B17942C8A62C78CF57 /* TPPeriodPlanViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodPlanViewState.swift; sourceTree = "<group>"; };
+		7005330E6BA928F0A412E898 /* TripPalette.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = TripPalette.xcconfig; sourceTree = "<group>"; };
+		7297884A2C3282A6BA668A6A /* TPPeriodsListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodsListFactory.swift; sourceTree = "<group>"; };
+		786E4EF20CB1509F4847D1E3 /* TPRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPRootView.swift; sourceTree = "<group>"; };
+		7908D425E1233A5D9012B7B8 /* TPCalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPCalendarDate.swift; sourceTree = "<group>"; };
+		7F4A3739312E1237980CA812 /* TPPeriodColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodColor.swift; sourceTree = "<group>"; };
+		80047EE01CBBCA9907A3BCD0 /* TPPeriodPlanFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodPlanFactory.swift; sourceTree = "<group>"; };
+		83B52903DCA97734F10A550F /* TPPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriod.swift; sourceTree = "<group>"; };
+		892CF37F4033E8585D0310EB /* TPCalendarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPCalendarFactory.swift; sourceTree = "<group>"; };
+		8DEF1D37E7C28C0C0AABAA90 /* TPPeriodPlanDayRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodPlanDayRecord.swift; sourceTree = "<group>"; };
+		931610543C39CE4587EBCFBF /* TPCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPCalendarView.swift; sourceTree = "<group>"; };
+		97AD55BC8BAAFF55D1F06BFB /* TPPeriodPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodPlanView.swift; sourceTree = "<group>"; };
+		9D65BBB049C6B2A3BFFA7643 /* TPPlanDaySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPlanDaySectionView.swift; sourceTree = "<group>"; };
+		A0EDE4FD8E78E32B0E587D82 /* TPPeriodsListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodsListViewState.swift; sourceTree = "<group>"; };
+		BA77DC00592B20FF555E72BE /* TPPeriodDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodDraft.swift; sourceTree = "<group>"; };
+		C01017C0F5D8E9D1E1F2054F /* TPMonthSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPMonthSectionView.swift; sourceTree = "<group>"; };
+		C04EF99A9854027096DFE951 /* TPDayCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPDayCellView.swift; sourceTree = "<group>"; };
+		C6CF718DFBB578DDA2DD01B7 /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		C76CF02CF9A97C207540D718 /* TripPalette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripPalette.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB1D7C3D6A71A271D6E30B72 /* TPListItemTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPListItemTextField.swift; sourceTree = "<group>"; };
+		D51C04C0B4DE7226A341F0BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D78726768A241B6D6C7D222E /* TPPeriodEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodEditorView.swift; sourceTree = "<group>"; };
+		E0B404BF92D239C57926DFB7 /* TPWeekRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPWeekRowView.swift; sourceTree = "<group>"; };
+		E4021D73528D28BE37F9F741 /* TPPeriodsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodsListViewModel.swift; sourceTree = "<group>"; };
+		E87398BA08BAD25196902467 /* TripPalette-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TripPalette-Info.plist"; sourceTree = "<group>"; };
+		E990E052C8D36F62E10E4810 /* TPPeriodsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodsListView.swift; sourceTree = "<group>"; };
+		F4E867402DBC67A3D9230C11 /* TPYearGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPYearGridView.swift; sourceTree = "<group>"; };
+		FBB02A768653CDB076385129 /* TPPeriodPlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPPeriodPlanViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		098A2996300231090042CF49 /* TripPalette */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = TripPalette;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
-		098A2991300231090042CF49 /* Frameworks */ = {
+		6ABCDE94144E438946E0BADB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB254A474E456BB29F1877E8 /* ElegantEmojiPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		098A298B300231090042CF49 = {
+		0BE272D5A309474820F7A8FA /* TripPalette */ = {
 			isa = PBXGroup;
 			children = (
-				098A2996300231090042CF49 /* TripPalette */,
-				098A2995300231090042CF49 /* Products */,
+				4A284D3C760151E2BD9EE137 /* App */,
+				2A2AF61D5C12CBB846AEEDC9 /* Core */,
+				29FF96B59FC431B53099FEBD /* Resources */,
+				BF5E6570570AA13A93382736 /* Screens */,
+				8160509AC3D8DDB94D0AAD62 /* Services */,
+			);
+			path = TripPalette;
+			sourceTree = "<group>";
+		};
+		25CF093C6AC590BD2CD6769E /* TPPeriodsListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7297884A2C3282A6BA668A6A /* TPPeriodsListFactory.swift */,
+				E990E052C8D36F62E10E4810 /* TPPeriodsListView.swift */,
+				E4021D73528D28BE37F9F741 /* TPPeriodsListViewModel.swift */,
+				A0EDE4FD8E78E32B0E587D82 /* TPPeriodsListViewState.swift */,
+			);
+			path = TPPeriodsListScreen;
+			sourceTree = "<group>";
+		};
+		263B6B7BC137834DA7C563B0 /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				BB0B313EAD1A9C60CA8AFFB8 /* InfoPlists */,
+				90E5EEFAA87F8546F9DB8804 /* Sources */,
+			);
+			path = Derived;
+			sourceTree = "<group>";
+		};
+		29FF96B59FC431B53099FEBD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D51C04C0B4DE7226A341F0BF /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2A2AF61D5C12CBB846AEEDC9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BA0F7862289C2E19739CE4C7 /* Extensions */,
+				A3A3C21DB751AF3B843CA5F3 /* Models */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		37E4A9BBA27247B834E88211 /* Tuist */ = {
+			isa = PBXGroup;
+			children = (
+				E9E54B27B0A4DF49C6B2FA25 /* Configs */,
+			);
+			path = Tuist;
+			sourceTree = "<group>";
+		};
+		4A284D3C760151E2BD9EE137 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				58617F04270C443C47839F07 /* AppRouter.swift */,
+				1C55CA9D4E402220F972371E /* TripPaletteApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5823B2E5C12875D8F4096B55 /* TPCalendarScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7EC41172E782C94B4AA2A5EC /* Models */,
+				D5DD4A30EF2EB2CA74A5C497 /* View */,
+				892CF37F4033E8585D0310EB /* TPCalendarFactory.swift */,
+				38687E74B5E5F78FB1ED498B /* TPCalendarRouter.swift */,
+				931610543C39CE4587EBCFBF /* TPCalendarView.swift */,
+				2BB4977448B1E746F134EA21 /* TPCalendarViewModel.swift */,
+				1D3A3F00341FF347A99539DF /* TPCalendarViewState.swift */,
+			);
+			path = TPCalendarScreen;
+			sourceTree = "<group>";
+		};
+		7EC41172E782C94B4AA2A5EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7908D425E1233A5D9012B7B8 /* TPCalendarDate.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8160509AC3D8DDB94D0AAD62 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8DEF1D37E7C28C0C0AABAA90 /* TPPeriodPlanDayRecord.swift */,
+				111001CCEF230A54A9821018 /* TPPeriodPlanService.swift */,
+				1B6C828ADABFFE99990FC638 /* TPPeriodRecord.swift */,
+				33AE713A767DE460B1068377 /* TPPeriodService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8D3E04D2F6F3320F8C1321A3 /* TPPeriodEditorScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D78726768A241B6D6C7D222E /* TPPeriodEditorView.swift */,
+			);
+			path = TPPeriodEditorScreen;
+			sourceTree = "<group>";
+		};
+		9004AE5A9EF7A2668000B563 /* TPRootScreen */ = {
+			isa = PBXGroup;
+			children = (
+				786E4EF20CB1509F4847D1E3 /* TPRootView.swift */,
+			);
+			path = TPRootScreen;
+			sourceTree = "<group>";
+		};
+		90E5EEFAA87F8546F9DB8804 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2DF1101BD1B31BA6D6EED164 /* TuistAssets+TripPalette.swift */,
+				38362F30B186EB7368F6A0BD /* TuistBundle+TripPalette.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		950D9525DFE503B3422870D6 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				263B6B7BC137834DA7C563B0 /* Derived */,
+				0BE272D5A309474820F7A8FA /* TripPalette */,
+				37E4A9BBA27247B834E88211 /* Tuist */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		A3A3C21DB751AF3B843CA5F3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				83B52903DCA97734F10A550F /* TPPeriod.swift */,
+				7F4A3739312E1237980CA812 /* TPPeriodColor.swift */,
+				BA77DC00592B20FF555E72BE /* TPPeriodDraft.swift */,
+				542C94E538A59F2F8010121D /* TPPeriodEditSession.swift */,
+				0C3EC304A663DABAF4CCE2B6 /* TPPlanBlock.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BA0F7862289C2E19739CE4C7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2DDA6C08C4BC71E7607E0C2A /* Color+TripPalette.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BB0B313EAD1A9C60CA8AFFB8 /* InfoPlists */ = {
+			isa = PBXGroup;
+			children = (
+				E87398BA08BAD25196902467 /* TripPalette-Info.plist */,
+			);
+			path = InfoPlists;
+			sourceTree = "<group>";
+		};
+		BF5E6570570AA13A93382736 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5823B2E5C12875D8F4096B55 /* TPCalendarScreen */,
+				8D3E04D2F6F3320F8C1321A3 /* TPPeriodEditorScreen */,
+				D0C265EA3D7AAF7D17A34CC6 /* TPPeriodPlanScreen */,
+				25CF093C6AC590BD2CD6769E /* TPPeriodsListScreen */,
+				9004AE5A9EF7A2668000B563 /* TPRootScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		C94644A6F1F5AF1B1FB8BBE7 = {
+			isa = PBXGroup;
+			children = (
+				EDBAC664130C45728A65DAB2 /* Products */,
+				950D9525DFE503B3422870D6 /* Project */,
 			);
 			sourceTree = "<group>";
 		};
-		098A2995300231090042CF49 /* Products */ = {
+		D0C265EA3D7AAF7D17A34CC6 /* TPPeriodPlanScreen */ = {
 			isa = PBXGroup;
 			children = (
-				098A2994300231090042CF49 /* TripPalette.app */,
+				E0A0E5D1BC3DA13275FDB098 /* View */,
+				80047EE01CBBCA9907A3BCD0 /* TPPeriodPlanFactory.swift */,
+				97AD55BC8BAAFF55D1F06BFB /* TPPeriodPlanView.swift */,
+				FBB02A768653CDB076385129 /* TPPeriodPlanViewModel.swift */,
+				6A9531B17942C8A62C78CF57 /* TPPeriodPlanViewState.swift */,
+			);
+			path = TPPeriodPlanScreen;
+			sourceTree = "<group>";
+		};
+		D5DD4A30EF2EB2CA74A5C497 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C04EF99A9854027096DFE951 /* TPDayCellView.swift */,
+				C01017C0F5D8E9D1E1F2054F /* TPMonthSectionView.swift */,
+				E0B404BF92D239C57926DFB7 /* TPWeekRowView.swift */,
+				F4E867402DBC67A3D9230C11 /* TPYearGridView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E0A0E5D1BC3DA13275FDB098 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB1D7C3D6A71A271D6E30B72 /* TPListItemTextField.swift */,
+				5C3C9DF1FE1D6D94742A6512 /* TPPlanBlockRowView.swift */,
+				9D65BBB049C6B2A3BFFA7643 /* TPPlanDaySectionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E9E54B27B0A4DF49C6B2FA25 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				C6CF718DFBB578DDA2DD01B7 /* Project.xcconfig */,
+				7005330E6BA928F0A412E898 /* TripPalette.xcconfig */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		EDBAC664130C45728A65DAB2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C76CF02CF9A97C207540D718 /* TripPalette.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,91 +353,163 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		098A2993300231090042CF49 /* TripPalette */ = {
+		0B10DB66FC76E823007CF5FC /* TripPalette */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 098A299F3002310B0042CF49 /* Build configuration list for PBXNativeTarget "TripPalette" */;
+			buildConfigurationList = 4794FD772FA577E52FA7438F /* Build configuration list for PBXNativeTarget "TripPalette" */;
 			buildPhases = (
-				098A2990300231090042CF49 /* Sources */,
-				098A2991300231090042CF49 /* Frameworks */,
-				098A2992300231090042CF49 /* Resources */,
+				B1065FF871E57A8635E4994A /* Sources */,
+				2EDCED4E6C9665F2D59ECDEE /* Resources */,
+				6ABCDE94144E438946E0BADB /* Frameworks */,
+				70DC489A7C4CA3CCB0966D95 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				098A2996300231090042CF49 /* TripPalette */,
-			);
 			name = TripPalette;
 			packageProductDependencies = (
+				F3F68269C02805A4D5621E3D /* ElegantEmojiPicker */,
 			);
 			productName = TripPalette;
-			productReference = 098A2994300231090042CF49 /* TripPalette.app */;
+			productReference = C76CF02CF9A97C207540D718 /* TripPalette.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		098A298C300231090042CF49 /* Project object */ = {
+		1F9CF90A1460713D6430E466 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2600;
-				LastUpgradeCheck = 2600;
+				BuildIndependentTargetsInParallel = YES;
+				ORGANIZATIONNAME = ilyailyaovch;
 				TargetAttributes = {
-					098A2993300231090042CF49 = {
-						CreatedOnToolsVersion = 26.0.1;
-					};
 				};
 			};
-			buildConfigurationList = 098A298F300231090042CF49 /* Build configuration list for PBXProject "TripPalette" */;
+			buildConfigurationList = 07B8212553EF67DD2CAB66F7 /* Build configuration list for PBXProject "TripPalette" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
-			mainGroup = 098A298B300231090042CF49;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
-			productRefGroup = 098A2995300231090042CF49 /* Products */;
+			mainGroup = C94644A6F1F5AF1B1FB8BBE7;
+			packageReferences = (
+				933911DA8FBEF353C89FD11C /* XCRemoteSwiftPackageReference "Elegant-Emoji-Picker" */,
+			);
+			productRefGroup = EDBAC664130C45728A65DAB2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				098A2993300231090042CF49 /* TripPalette */,
+				0B10DB66FC76E823007CF5FC /* TripPalette */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		098A2992300231090042CF49 /* Resources */ = {
+		2EDCED4E6C9665F2D59ECDEE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B52817A0503143A703A0B5E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		098A2990300231090042CF49 /* Sources */ = {
+		B1065FF871E57A8635E4994A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D44670FC44799413D3F9EF0E /* TuistAssets+TripPalette.swift in Sources */,
+				3214DFD2DA12515D82D34C72 /* TuistBundle+TripPalette.swift in Sources */,
+				D208789151B015BB68D57A95 /* AppRouter.swift in Sources */,
+				B3418DC02D40AAD026E17AD5 /* TripPaletteApp.swift in Sources */,
+				4B4D9E94AA7136FDC51D8F75 /* Color+TripPalette.swift in Sources */,
+				14935307053F274F9DD2A621 /* TPPeriod.swift in Sources */,
+				E70F087323266C40F35DAB52 /* TPPeriodColor.swift in Sources */,
+				178A4E4FC111CFF8E4A1F494 /* TPPeriodDraft.swift in Sources */,
+				C29C0200E21780AC8576E199 /* TPPeriodEditSession.swift in Sources */,
+				7DEB08E3241FC48EB61CC37A /* TPPlanBlock.swift in Sources */,
+				D33E2FA68CCD923A8D681D31 /* TPCalendarDate.swift in Sources */,
+				B93AD3516FFDF5F96BADAE86 /* TPCalendarFactory.swift in Sources */,
+				7D61A46DE47DA84E943A8FC1 /* TPCalendarRouter.swift in Sources */,
+				C10842CF8D6A08F730A29392 /* TPCalendarView.swift in Sources */,
+				B09DF0BD542076888F5F81BE /* TPCalendarViewModel.swift in Sources */,
+				59271D625E781E524807CCA8 /* TPCalendarViewState.swift in Sources */,
+				84A62CC7B23AA908FEC137D4 /* TPDayCellView.swift in Sources */,
+				F07123047E5109364B4DEE7B /* TPMonthSectionView.swift in Sources */,
+				96DE1CBE7DA0FC900E39DA50 /* TPWeekRowView.swift in Sources */,
+				1AD57B7278EA0799C1E35970 /* TPYearGridView.swift in Sources */,
+				C907343F68FD357E2F6751BE /* TPPeriodEditorView.swift in Sources */,
+				0A5C8D4BC979872D5633D014 /* TPPeriodPlanFactory.swift in Sources */,
+				5A82F4D6CBD959CEC2538CFC /* TPPeriodPlanView.swift in Sources */,
+				B7FDAE6E0FC7E5542E070B56 /* TPPeriodPlanViewModel.swift in Sources */,
+				54C7513D12E8187C5B8A49A0 /* TPPeriodPlanViewState.swift in Sources */,
+				462A5349B34F82F5C5F5A4FD /* TPListItemTextField.swift in Sources */,
+				42141A602FEAF1DCAA33062D /* TPPlanBlockRowView.swift in Sources */,
+				22143378C9654BF63A8DBB32 /* TPPlanDaySectionView.swift in Sources */,
+				7AA3F1F2048E5528C22B38E5 /* TPPeriodsListFactory.swift in Sources */,
+				EE48F6D0E5E23F3DC489E0FA /* TPPeriodsListView.swift in Sources */,
+				AC83FBB78DA95A348FD9154B /* TPPeriodsListViewModel.swift in Sources */,
+				C144ED4C5510EB626BFFD4E4 /* TPPeriodsListViewState.swift in Sources */,
+				3632CFF7643027DEA70BE195 /* TPRootView.swift in Sources */,
+				6D1C3226ADFCB9AFBEDA683D /* TPPeriodPlanDayRecord.swift in Sources */,
+				7BC48C1A9CF4E38B682DB716 /* TPPeriodPlanService.swift in Sources */,
+				0714CAFD66CB44C0E10ED1A0 /* TPPeriodRecord.swift in Sources */,
+				8AF9CA370FD6DA12AA19F91B /* TPPeriodService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		098A299D3002310B0042CF49 /* Debug */ = {
+		133E8E44DB1055D74623B745 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7005330E6BA928F0A412E898 /* TripPalette.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/TripPalette-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-L$(DT_TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ilyailyaovch.TripPalette;
+				PRODUCT_NAME = TripPalette;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+					"$(inherited)",
+					DEBUG,
+				);
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17D4883A5AE9165AA089E3CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6CF718DFBB578DDA2DD01B7 /* Project.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -159,12 +536,96 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		76D95103E7FD117CF2AA6B9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7005330E6BA928F0A412E898 /* TripPalette.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/TripPalette-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-L$(DT_TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ilyailyaovch.TripPalette;
+				PRODUCT_NAME = TripPalette;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7D359289D291F42FCCC04631 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6CF718DFBB578DDA2DD01B7 /* Project.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 8GJMP9US45;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -178,160 +639,52 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
-		};
-		098A299E3002310B0042CF49 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 8GJMP9US45;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		098A29A03002310B0042CF49 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8GJMP9US45;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ilyailyaovch.TripPalette;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		098A29A13002310B0042CF49 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8GJMP9US45;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ilyailyaovch.TripPalette;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		098A298F300231090042CF49 /* Build configuration list for PBXProject "TripPalette" */ = {
+		07B8212553EF67DD2CAB66F7 /* Build configuration list for PBXProject "TripPalette" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				098A299D3002310B0042CF49 /* Debug */,
-				098A299E3002310B0042CF49 /* Release */,
+				7D359289D291F42FCCC04631 /* Debug */,
+				17D4883A5AE9165AA089E3CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		098A299F3002310B0042CF49 /* Build configuration list for PBXNativeTarget "TripPalette" */ = {
+		4794FD772FA577E52FA7438F /* Build configuration list for PBXNativeTarget "TripPalette" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				098A29A03002310B0042CF49 /* Debug */,
-				098A29A13002310B0042CF49 /* Release */,
+				133E8E44DB1055D74623B745 /* Debug */,
+				76D95103E7FD117CF2AA6B9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		933911DA8FBEF353C89FD11C /* XCRemoteSwiftPackageReference "Elegant-Emoji-Picker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Finalet/Elegant-Emoji-Picker";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F3F68269C02805A4D5621E3D /* ElegantEmojiPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ElegantEmojiPicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 098A298C300231090042CF49 /* Project object */;
+	rootObject = 1F9CF90A1460713D6430E466 /* Project object */;
 }

@@ -1,0 +1,107 @@
+---
+description: TripPalette naming — TP prefix for Views, ViewModels, and Models
+alwaysApply: true
+---
+
+# Naming: TP prefix
+
+- All SwiftUI `View` types (and `UIViewRepresentable`) must start with `TP` and end with `View` (e.g. `TPCalendarView`, `TPDayCellView`).
+- All view models must start with `TP` and end with `ViewModel` (e.g. `TPCalendarViewModel`).
+- All models must start with `TP` (e.g. `TPPeriod`, `TPPeriodDraft`).
+- Screen folders are named `TP(Name)Screen`.
+- Do not introduce bare names like `CalendarView`, `CalendarViewModel`, or `TripPeriod`.
+
+```swift
+// ❌ BAD
+struct CalendarView: View { ... }
+final class CalendarViewModel: ObservableObject { ... }
+struct TripPeriod: Identifiable { ... }
+
+// ✅ GOOD
+struct TPCalendarView: View { ... }
+final class TPCalendarViewModel: ObservableObject { ... }
+struct TPPeriod: Identifiable { ... }
+```
+
+# ViewModel state: use ViewState, not many `@Published` fields
+
+- Do not scatter UI state across multiple `@Published` properties on the view model.
+- Put screen UI state into a single `TP(Name)ViewState` struct.
+- The view model exposes one `@Published` (or `@Published private(set)`) `state: TP(Name)ViewState`.
+- Mutate state by copying → changing → reassigning (so SwiftUI always gets a publish).
+- Views read data via `viewModel.state.*` and call view model methods for actions.
+
+```swift
+// ❌ BAD
+final class TPCalendarViewModel: ObservableObject {
+    @Published var periods: [TPPeriod] = []
+    @Published var selectedDates: Set<DateComponents> = []
+    @Published var displayMode: TPCalendarDisplayMode = .month
+    @Published var focusedMonth: DateComponents
+}
+
+// ✅ GOOD
+struct TPCalendarViewState: Equatable {
+    var periods: [TPPeriod] = []
+    var selectedDates: Set<DateComponents> = []
+    var displayMode: TPCalendarDisplayMode = .month
+    var focusedMonth: DateComponents
+}
+
+final class TPCalendarViewModel: ObservableObject {
+    @Published private(set) var state: TPCalendarViewState
+}
+```
+
+# Screen assembly: use Factory
+
+- Each screen has `TP(Name)Factory` as a `@MainActor final class` with a static method `configure()` that returns a ready-to-show view.
+- Wire dependencies inside `configure()` and return the view. Call sites only do `TP(Name)Factory.configure()`.
+- Do not add private wrapper views or separate `makeRouter` / `makeViewModel` / `makeView` helpers unless needed.
+
+```swift
+// ❌ BAD
+enum TPCalendarFactory { ... }
+struct TPCalendarFactory { ... }
+TPCalendarView(viewModel: TPCalendarViewModel(router: TPCalendarRouter()))
+
+// ✅ GOOD
+@MainActor
+final class TPCalendarFactory {
+    static func configure() -> some View {
+        let router = TPCalendarRouter()
+        let viewModel = TPCalendarViewModel(router: router)
+        let view = TPCalendarView(viewModel: viewModel)
+        return view
+    }
+}
+
+TPCalendarFactory.configure()
+```
+
+# Screen folder structure
+
+Each `TP(Name)Screen` folder contains:
+
+- The main screen view: `TP(Name)View.swift`
+- The view model: `TP(Name)ViewModel.swift`
+- The view state: `TP(Name)ViewState.swift`
+- The factory: `TP(Name)Factory.swift`
+- The router if needed: `TP(Name)Router.swift`
+- Optional screen-level helpers (e.g. date utilities)
+
+Smaller/supporting views go into a nested `View/` folder:
+
+```
+TPCalendarScreen/
+  TPCalendarFactory.swift
+  TPCalendarView.swift
+  TPCalendarViewModel.swift
+  TPCalendarViewState.swift
+  TPCalendarRouter.swift
+  TPCalendarDate.swift
+  View/
+    TPDayCellView.swift
+    TPMonthSectionView.swift
+    TPYearGridView.swift
+```
